@@ -6,4 +6,9 @@ public class RubberDuck extends Duck implements QuackBehavior {
     public void quack() {
 
     }
+
+    @Override
+    public void display() {
+
+    }
 }

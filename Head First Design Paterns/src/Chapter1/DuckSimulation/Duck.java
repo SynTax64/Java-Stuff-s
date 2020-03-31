@@ -1,20 +1,23 @@
 package Chapter1.DuckSimulation;
 
-public class Duck {
+public abstract class Duck {
+    public FlyBehavior flyBehavior;
+    public QuackBehavior quackBehavior;
+
+    public Duck() {
+    }
+
+    public void performQuack() {
+        quackBehavior.quack();
+    }
+
+    public void performFly() {
+        flyBehavior.fly();
+    }
+
     public void swim() {
-
+        System.out.println("All ducks float, even decoys!");
     }
 
-    /*public void quack() {
-
-    }*/
-
-    public void display() {
-
-    }
-
-    /*public void fly() {
-
-    }*/
-
+    public abstract void display();
 }

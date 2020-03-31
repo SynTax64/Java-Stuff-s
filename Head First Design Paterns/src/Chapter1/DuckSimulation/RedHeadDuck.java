@@ -11,4 +11,9 @@ public class RedHeadDuck extends Duck implements FlyBehavior, QuackBehavior {
     public void quack() {
 
     }
+
+    @Override
+    public void display() {
+
+    }
 }
