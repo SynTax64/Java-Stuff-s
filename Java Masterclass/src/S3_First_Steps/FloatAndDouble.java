@@ -22,7 +22,16 @@ public class FloatAndDouble {
         System.out.printf("%f\n", myMinFloat);
         System.out.printf("%f\n", myMaxFloat);
         System.out.printf("%f\n", myMinDouble);
+
         System.out.printf("%f\n", myMaxDouble);
+
+        int myIntVal = 13 / 7;
+        float myFloatVal = 13f / 7f;
+        double myDoubleVal = 13.00 / 7.00;
+        System.out.println(myIntVal);
+        System.out.println(myFloatVal);
+        System.out.println(myDoubleVal);
+
 
     }
 }
