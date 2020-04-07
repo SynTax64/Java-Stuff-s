@@ -1,6 +1,6 @@
 package S3_First_Steps;
 
-public class PrimitiveDataTypesChallenge {
+public class Challenge_PrimitiveDataTypes {
     public static void main(String[] args) {
         // byte
         byte myByteValue = 125;

@@ -1,6 +1,6 @@
 package S3_First_Steps;
 
-public class OperatorsChallenge {
+public class Challenge_Operators {
     public static void main(String[] args) {
         double myValue1 = 21.0d;
         double myValue2 = 80.0d;

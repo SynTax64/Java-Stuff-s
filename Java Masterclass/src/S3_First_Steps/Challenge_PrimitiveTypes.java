@@ -1,6 +1,6 @@
 package S3_First_Steps;
 
-public class PrimitiveTypesChallenge {
+public class Challenge_PrimitiveTypes {
     public static void main(String[] args) {
         byte myByteVal = 10;
         short myShorVal = 20;
