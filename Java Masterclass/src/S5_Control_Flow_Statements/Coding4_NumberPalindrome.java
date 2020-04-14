@@ -2,7 +2,7 @@ package S5_Control_Flow_Statements;
 
 public class Coding4_NumberPalindrome {
     public static void main(String[] args) {
-        isPalindrome(121);
+        isPalindrome(123454621);
     }
 
     public static boolean isPalindrome(int number) {
