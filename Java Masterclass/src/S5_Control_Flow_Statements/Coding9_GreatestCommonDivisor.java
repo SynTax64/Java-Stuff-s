@@ -21,8 +21,25 @@ package S5_Control_Flow_Statements;
 // NOTE: Do not add a main method to the solution code.
 
 public class Coding9_GreatestCommonDivisor {
-    public static int getGreatestCommonDivisor(int first, int second) {
+    public static void main(String[] args) {
+        System.out.println(getGreatestCommonDivisor(132, 1573));
+    }
 
+    public static int getGreatestCommonDivisor(int first, int second) {
+        if ((first < 10) || (second < 10)) {
+            return -1;
+        } else {
+            int testNumber = (first > second) ? first : second;
+            for (int i = testNumber; i > 0; i--) {
+                if ((first % i == 0) && (second % i == 0)) {
+                    return i;
+                } else {
+                    continue;
+                }
+            }
+
+        }
+        return -1;
     }
 }
 
