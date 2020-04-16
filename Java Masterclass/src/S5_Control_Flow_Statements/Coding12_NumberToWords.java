@@ -13,61 +13,60 @@ public class Coding12_NumberToWords {
         if (number < 0) {
             System.out.println("Invalid Value");
         } else {
-//            number = reverse(number);
 
+            number = reverse(number);
             String output = "";
-            for (int i = 0; i > getDigitCount(number); i++) {
-                String stringNumber = reverse(number);
-                do {
-//                    int lastDigit = number % 10;
 
-                    switch (stringNumber.charAt(i)) {
-                        case '0':
-                            output += "Zero ";
-                            break;
-                        case '1':
-                            output += "One ";
-                            break;
-                        case '2':
-                            output += "Two ";
-                            break;
-                        case '3':
-                            output += "Three ";
-                            break;
-                        case '4':
-                            output += "Four";
-                            break;
-                        case '5':
-                            output += "Five ";
-                            break;
-                        case '6':
-                            output += "Six ";
-                            break;
-                        case '7':
-                            output += "Seven ";
-                            break;
-                        case '8':
-                            output += "Eight ";
-                            break;
-                        case '9':
-                            output += "Nine ";
-                            break;
-                    }
-                    number /= 10;
+            do {
+                int lastDigit = number % 10;
+
+                switch (lastDigit) {
+                    case 0:
+                        output += "Zero ";
+                        break;
+                    case 1:
+                        output += "One ";
+                        break;
+                    case 2:
+                        output += "Two ";
+                        break;
+                    case 3:
+                        output += "Three ";
+                        break;
+                    case 4:
+                        output += "Four";
+                        break;
+                    case 5:
+                        output += "Five ";
+                        break;
+                    case 6:
+                        output += "Six ";
+                        break;
+                    case 7:
+                        output += "Seven ";
+                        break;
+                    case 8:
+                        output += "Eight ";
+                        break;
+                    case 9:
+                        output += "Nine ";
+                        break;
                 }
-                while (number != 0);
+                number /= 10;
             }
-
-            System.out.println(output.trim());
+            while (number != 0);
+            System.out.println(output);
         }
-    }
 
-    public static String reverse(int number) {
-        String reverseNumber = "";
+    }
+    
+
+    public static int reverse(int number) {
+        int reverseNumber = 0;
 
         while (number != 0) {
             int lastDigit = number % 10;
-            reverseNumber += (lastDigit == 0) ? "0" : lastDigit;
+            reverseNumber += (lastDigit * 10) + lastDigit;
             number /= 10;
         }
         return reverseNumber;
