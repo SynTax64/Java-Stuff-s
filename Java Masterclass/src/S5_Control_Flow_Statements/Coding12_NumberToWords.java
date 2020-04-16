@@ -1,24 +1,28 @@
 package S5_Control_Flow_Statements;
 
 public class Coding12_NumberToWords {
-//    public static void main(String[] args) {
+    public static void main(String[] args) {
 //        System.out.println(getDigitCount(0));
 //        System.out.println(getDigitCount(123));
 //        System.out.println(getDigitCount(-12));
 //        System.out.println(getDigitCount(5200));
-//        System.out.println(reverse(1000));
-//    }
+//        System.out.println(reverse(5));
+//        System.out.println(reverse(15));
+        numberToWords(10);
+    }
 
     public static void numberToWords(int number) {
         if (number < 0) {
             System.out.println("Invalid Value");
         } else {
 
-            number = reverse(number);
+            int reverseNumber = reverse(number);
             String output = "";
 
+            int leadZeros = getDigitCount(number) - getDigitCount(reverseNumber);
+
             do {
-                int lastDigit = number % 10;
+                int lastDigit = reverseNumber % 10;
 
                 switch (lastDigit) {
                     case 0:
@@ -34,7 +38,7 @@ public class Coding12_NumberToWords {
                         output += "Three ";
                         break;
                     case 4:
-                        output += "Four";
+                        output += "Four ";
                         break;
                     case 5:
                         output += "Five ";
@@ -52,21 +56,26 @@ public class Coding12_NumberToWords {
                         output += "Nine ";
                         break;
                 }
-                number /= 10;
+                reverseNumber /= 10;
             }
-            while (number != 0);
+            while (reverseNumber != 0);
+
+            while (leadZeros-- > 0) {
+                output += "Zero ";
+            }
+
             System.out.println(output);
         }
 
     }
-    
+
 
     public static int reverse(int number) {
         int reverseNumber = 0;
 
         while (number != 0) {
             int lastDigit = number % 10;
-            reverseNumber += (lastDigit * 10) + lastDigit;
+            reverseNumber = (reverseNumber * 10) + lastDigit;
             number /= 10;
         }
         return reverseNumber;
