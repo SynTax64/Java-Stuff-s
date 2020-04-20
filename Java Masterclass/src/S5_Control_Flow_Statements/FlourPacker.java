@@ -5,9 +5,13 @@ public class FlourPacker {
     public static boolean canPack(int bigCount, int smallCount, int goal) {
         final int BIG_BAG = 5; // represent 5kg bag of flour
         final int SMALL_BAG = 1; // represent 1kg bag of flour
-        int resultOfKilos = ((bigCount * BIG_BAG) + (smallCount * SMALL_BAG));
 
-        if (bigCount < 0 || smallCount < 0 || goal < 0) {
+        int kilosOfBigPack = bigCount * BIG_BAG;
+        int kilosOfSmallPack = smallCount * SMALL_BAG;
+
+        int sumOfKilos = kilosOfBigPack + kilosOfSmallPack;
+
+        if (((sumOfKilos) < goal)) {
             return false;
         }
         return false;
