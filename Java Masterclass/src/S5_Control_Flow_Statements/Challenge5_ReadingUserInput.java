@@ -2,7 +2,7 @@ package S5_Control_Flow_Statements;
 
 import java.util.Scanner;
 
-public class Challenge_ReadingUserInput {
+public class Challenge5_ReadingUserInput {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int sum = 0;
