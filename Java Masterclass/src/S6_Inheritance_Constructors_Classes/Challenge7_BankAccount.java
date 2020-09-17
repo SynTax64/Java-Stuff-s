@@ -18,6 +18,7 @@ public class Challenge7_BankAccount {
     }
 
     public Challenge7_BankAccount() {
+//        this(1001, 15200, "David A.", "davidas@gmail.com", "0012/34-567-89-00");
         System.out.println("You are constructor without parameters called");
     }
 
