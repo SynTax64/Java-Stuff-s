@@ -1,0 +1,5 @@
+package S6_Inheritance_Constructors_Classes.Burger_Factory;
+
+public class HealthyBurger extends Burger {
+
+}
