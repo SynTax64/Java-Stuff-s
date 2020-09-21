@@ -1,7 +1,5 @@
 package S6_Inheritance_Constructors_Classes;
 
-import java.sql.SQLOutput;
-
 public class MainCars {
     public static void main(String[] args) {
         Car porsche = new Car();
