@@ -1,4 +1,4 @@
-package S7_Composition_Encapsulation_Polymorphism.MasterChallenge;
+package S7_Composition_Encapsulation_Polymorphism.MasterChallenge11;
 
 public class DeluxeBurger extends Hamburger {
     public DeluxeBurger() {
