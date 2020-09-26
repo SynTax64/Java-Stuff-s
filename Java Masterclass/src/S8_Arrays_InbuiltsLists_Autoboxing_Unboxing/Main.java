@@ -40,7 +40,7 @@ public class Main {
                     int place = scanner.nextInt() - 1;
                     System.out.println("Enter an item: (String)");
                     String cItem = scanner.nextLine();
-                    groceryList.replaceGroceryItem(place, cItem);
+                    groceryList.modifyGroceryItem(place, cItem);
                     break;
                 case 4:
                     System.out.print("Enter place of item to be removed: ");
@@ -48,7 +48,7 @@ public class Main {
                     break;
                 case 5:
                     System.out.print("Enter name of the item: ");
-                    String sItem = groceryList.searchItem(scanner.nextLine());
+                    String sItem = groceryList.getItem(scanner.nextLine());
                     if (sItem != null) {
                         System.out.println("Item " + sItem + " found");
                     } else {

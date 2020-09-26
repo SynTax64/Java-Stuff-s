@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class GroceryList {
 
-    ArrayList<String> groceryList = new ArrayList<String>();
+    private ArrayList<String> groceryList = new ArrayList<String>();
 
     public void printGroceryItems() {
         System.out.println("Your grocery list has: " + groceryList.size() + " items.");
@@ -18,14 +18,21 @@ public class GroceryList {
         }
     }
 
+    public void modifyGroceryItem(String newItem) {
+        int position = searchItem(newItem);
+        if (position >= 0) {
+            modifyGroceryItem(position, newItem);
+        }
+    }
+
+    public void modifyGroceryItem(int position, String item) {
+        groceryList.set(position, item); // how to replace item in ArrayList
+        System.out.println("It was replaced item \"" + groceryList.get(position) + "\" on  the list");
+    }
+
     public void addGroceryItem(String item) {
         groceryList.add(item); // how to add item in ArrayList
         System.out.println("It was added item: " + item);
-    }
-
-    public void replaceGroceryItem(int position, String item) {
-        groceryList.set(position, item); // how to replace item in ArrayList
-        System.out.println("It was replaced item \"" + groceryList.get(position) + "\" on  the list");
     }
 
     public void removeGroceryItem(int position) {
@@ -33,12 +40,11 @@ public class GroceryList {
         groceryList.remove(position);
     }
 
-    public String searchItem(String searchItem) {
-        boolean isExists = groceryList.contains(searchItem); // how to check if item exists in this list
-        int position = groceryList.indexOf(searchItem); // how to ge index of item, which we searching for, if not in list return -1
-        if (position >= 0) {
-            return groceryList.get(position); // if item exists return value of item
-        }
-        return null; // if not exists return empty object(null)
+    public int searchItem(String searchItem) {
+        return groceryList.indexOf(searchItem); // if item exists return value of item
+    }
+
+    public String getItem(String item) {
+        return groceryList.get(searchItem(item));
     }
 }
