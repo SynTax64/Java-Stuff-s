@@ -41,10 +41,11 @@ public class GroceryList {
     }
 
     public int searchItem(String searchItem) {
-        return groceryList.indexOf(searchItem); // if item exists return value of item
+        return groceryList.indexOf(searchItem); // if item exists return 0 or greater value
     }
 
     public String getItem(String item) {
-        return groceryList.get(searchItem(item));
+        int position = searchItem(item);
+        return (position < 0) ? null : groceryList.get(searchItem(item));
     }
 }
