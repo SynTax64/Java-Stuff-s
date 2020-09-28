@@ -14,7 +14,7 @@ public class GroceryList {
         }*/
 
         for (int i = 0; i < groceryList.size(); i++) { // or with normal for loop
-            System.out.println("Item #" + i + ": " + groceryList.get(i));
+            System.out.println("Item #" + (i + 1) + ": " + groceryList.get(i));
         }
     }
 
@@ -37,7 +37,7 @@ public class GroceryList {
 
     public void removeGroceryItem(int position) {
         String item = groceryList.get(position);
-        groceryList.remove(position);
+        groceryList.remove(position - 1);
     }
 
     public int searchItem(String searchItem) {

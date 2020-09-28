@@ -23,6 +23,7 @@ public class Main {
         while (!quit) {
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
+            scanner.nextLine();
             switch (choice) {
                 case 0:
                     printInstructions();
@@ -31,14 +32,14 @@ public class Main {
                     groceryList.printGroceryItems();
                     break;
                 case 2:
-                    System.out.println("Enter an item: ");
+                    System.out.print("Enter an item: ");
                     String item = scanner.nextLine();
                     groceryList.addGroceryItem(item);
                     break;
                 case 3:
-                    System.out.print("Replace item on place (int) ");
+                    System.out.print("Replace item on place (int): ");
                     int place = scanner.nextInt() - 1;
-                    System.out.println("Enter an item: (String)");
+                    System.out.print("Enter an item: (String)");
                     String cItem = scanner.nextLine();
                     groceryList.modifyGroceryItem(place, cItem);
                     break;
