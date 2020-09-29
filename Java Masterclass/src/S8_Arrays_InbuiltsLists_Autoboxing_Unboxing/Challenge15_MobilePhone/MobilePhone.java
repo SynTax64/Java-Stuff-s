@@ -92,4 +92,8 @@ public class MobilePhone {
         }
         return position;
     }
+
+    public void startPhone() {
+        System.out.println("Starting phone...");
+    }
 }

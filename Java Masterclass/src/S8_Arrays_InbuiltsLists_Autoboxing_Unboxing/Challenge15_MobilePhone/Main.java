@@ -7,6 +7,7 @@ public class Main {
 
     public static void startPoint() {
         MobilePhone mobilePhone = new MobilePhone("654 65 654 456");
+        mobilePhone.startPhone();
         mobilePhone.printInstructions();
         boolean quit = false;
         while (!quit) {
@@ -38,18 +39,18 @@ public class Main {
                 case 5:
                     System.out.print("Enter name of the contact: ");
                     String fString = scanner.nextLine();
-                    int position= mobilePhone.searchContact(fString);
+                    int position = mobilePhone.searchContact(fString);
                     if (position < 0) {
                         System.out.println("I have found the contact " + fString +
                                 " on position" + position);
                     } else {
-                        System.out.println("I have not found the contact "+fString+
+                        System.out.println("I have not found the contact " + fString +
                                 " in your phonebook");
                     }
                     break;
                 case 0:
                     quit = true;
-                    System.out.print("Your are quit the application");
+                    System.out.print("Shutting down...");
                     break;
 
                 default:
@@ -58,6 +59,7 @@ public class Main {
             }
         }
     }
+
     public static void main(String[] args) {
         startPoint();
     }
