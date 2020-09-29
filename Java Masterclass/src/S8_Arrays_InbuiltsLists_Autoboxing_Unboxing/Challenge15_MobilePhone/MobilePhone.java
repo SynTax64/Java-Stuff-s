@@ -14,11 +14,12 @@ public class MobilePhone {
     }
 
     public void printInstructions() {
-        System.out.println("1. Print list of Contacts");
-        System.out.println("2. Add new contact");
-        System.out.println("3. Update existing contact");
-        System.out.println("4. Remove contact");
-        System.out.println("5. Search/find contact");
+        System.out.println("1. Print instructions");
+        System.out.println("2. Print list of Contacts");
+        System.out.println("3. Add new contact");
+        System.out.println("4. Update existing contact");
+        System.out.println("5. Remove contact");
+        System.out.println("6. Search/find contact");
         System.out.println("0. Quit application");
     }
 

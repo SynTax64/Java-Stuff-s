@@ -16,33 +16,35 @@ public class Main {
             scanner.nextLine();
             switch (n) {
                 case 1:
+                    mobilePhone.printInstructions();
+                case 2:
                     mobilePhone.printContacts();
                     break;
-                case 2:
+                case 3:
                     System.out.print("Enter a full name: ");
                     String fullName = scanner.nextLine();
-                    System.out.println("Enter a phone number: ");
+                    System.out.print("Enter a phone number: ");
                     String phoneNumber = scanner.nextLine();
                     Contact contact = new Contact(fullName, phoneNumber);
                     mobilePhone.addNewContact(contact);
                     break;
-                case 3:
+                case 4:
                     System.out.print("Which contact do you want update: ");
                     String oName = scanner.nextLine();
                     mobilePhone.updateContact(oName);
                     break;
-                case 4:
+                case 5:
                     System.out.print("Which contact do you want remove: ");
                     String rString = scanner.nextLine();
                     mobilePhone.removeContact(rString);
                     break;
-                case 5:
+                case 6:
                     System.out.print("Enter name of the contact: ");
                     String fString = scanner.nextLine();
                     int position = mobilePhone.searchContact(fString);
-                    if (position < 0) {
+                    if (position >= 0) {
                         System.out.println("I have found the contact " + fString +
-                                " on position" + position);
+                                " on position " + (position + 1));
                     } else {
                         System.out.println("I have not found the contact " + fString +
                                 " in your phonebook");
