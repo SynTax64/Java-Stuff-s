@@ -4,8 +4,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MobilePhone {
-    private ArrayList<Contact> contacts = new ArrayList<Contact>();
+    private String myNumber;
+    private ArrayList<Contact> contacts;
     private Scanner scanner = new Scanner(System.in);
+
+    public MobilePhone(String myNumber) {
+        this.myNumber = myNumber;
+        this.contacts = new ArrayList<Contact>();
+    }
 
     public void printInstructions() {
         System.out.println("1. Print list of Contacts");
@@ -17,7 +23,7 @@ public class MobilePhone {
     }
 
     public void printContacts() {
-        System.out.println("You have " + contacts.size() + " saved contacts in your phone book");
+        System.out.println("You have " + contacts.size() + " saved contacts in your phonebook");
         int counterOfContact = 1;
         for (Contact contact : contacts) {
             System.out.println("Contact " + counterOfContact + ": " + "\n\tName: " + contact.getFullName() +
@@ -38,8 +44,12 @@ public class MobilePhone {
     }
 
     public void addNewContact(Contact contact) {
-        contacts.add(contact);
-        System.out.println("You have added new contact");
+        if (searchContact(contact.getFullName()) > 0) {
+            System.out.println("This contact already exist");
+        } else {
+            contacts.add(contact);
+            System.out.println("You have added new contact");
+        }
     }
 
     public void updateContact(String name) {
@@ -73,22 +83,13 @@ public class MobilePhone {
     }
 
     public int searchContact(String name) {
-        int position = 0;
+        int position = -1;
         for (int i = 0; i < contacts.size(); i++) {
             if (contacts.get(i).getFullName().equals(name)) {
                 position = i;
                 break;
-            } else {
-                position = -1;
             }
         }
-        if (position >= 0) {
-            System.out.println("Contact \"" + name + "\" found on position " + position);
-
-        } else {
-            System.out.println("Contact \"" + name + "\" is not found");
-        }
-
         return position;
     }
 }
