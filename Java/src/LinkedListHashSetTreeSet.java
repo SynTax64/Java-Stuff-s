@@ -9,6 +9,14 @@ public class LinkedListHashSetTreeSet {
         return str;
     }
 
+    public static String printWithIterator(Collection<Integer> collection) {
+        String str = "";
+        for (Iterator<Integer> it = collection.iterator(); it.hasNext(); ) {
+            str += it.next().toString() + " ";
+        }
+        return str;
+    }
+
     public static void main(String[] args) {
 
         LinkedList<Integer> linkedList = new LinkedList<Integer>();
@@ -24,6 +32,12 @@ public class LinkedListHashSetTreeSet {
         System.out.println("LinkedList: " + printCollections(linkedList));
         System.out.println("HashSet: " + printCollections(hashSet));
         System.out.println("TreeSet: " + printCollections(treeSet));
+
+        System.out.println();
+
+        System.out.println("LinkedList: " + printWithIterator(linkedList));
+        System.out.println("HashSet: " + printWithIterator(hashSet));
+        System.out.println("TreeSet: " + printWithIterator(treeSet));
 
 
     }
