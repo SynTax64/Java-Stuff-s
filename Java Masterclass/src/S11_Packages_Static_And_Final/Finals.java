@@ -21,19 +21,19 @@ public class Finals {
     }
 
     public static void main(String[] args) {
-        Finals f1 = new Finals("one");
+        /*Finals f1 = new Finals("one");
         Finals f2 = new Finals("two");
         Finals f3 = new Finals("three");
 
         System.out.println(f1.getName() + " instance " + f1.getInstanceNumber());
         System.out.println(f2.getName() + " instance " + f2.getInstanceNumber());
-        System.out.println(f3.getName() + " instance " + f3.getInstanceNumber());
+        System.out.println(f3.getName() + " instance " + f3.getInstanceNumber());*/
 
-        double pi = Math.PI;
+//        double pi = Math.PI;
 //        Math math = new Math(); //can't be instantiated, has private constructor and can't be extended because is final class
 
         int pw = 465654;
-        Password password = new Password(pw);
+        Password password = new ExtendedPassword(pw);
         password.storePassword();
         password.letMeIn(65434);
         password.letMeIn(52342);

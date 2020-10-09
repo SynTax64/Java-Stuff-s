@@ -4,15 +4,15 @@ public class Password {
     private static final int key = 465816543;
     private final int encryptedPassword;
 
-    public Password(int encryptedPassword) {
-        this.encryptedPassword = encryptDecrypt(encryptedPassword);
+    public Password(int password) {
+        this.encryptedPassword = encryptDecrypt(password);
     }
 
-    public int encryptDecrypt(int password) {
+    private int encryptDecrypt(int password) {
         return password ^ key;
     }
 
-    public void storePassword() {
+    public final void storePassword() {
         System.out.println("Saving password: " + this.encryptedPassword);
     }
 
