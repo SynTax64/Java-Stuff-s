@@ -1,11 +1,10 @@
 package S12_Collections;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Theater {
     private final String theatreName;
-    private List<Seat> seats = new ArrayList<>();
+    private Collection<Seat> seats = new ArrayList<>();
 
     public Theater(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
@@ -43,7 +42,7 @@ public class Theater {
         }
     }
 
-    private class Seat {
+    private class Seat implements Comparable<Seat> {
         private final String seatNumber;
         private boolean reserved = false;
 
@@ -67,13 +66,19 @@ public class Theater {
 
         public boolean cancel() {
             if (this.reserved) {
-                this.reserved = true;
+                this.reserved = false;
                 System.out.println("Reservation of seat " + seatNumber + " cancelled");
                 return true;
             } else {
                 return false;
             }
         }
+
+        @Override
+        public int compareTo(Seat seat) {
+            return this.seatNumber.compareTo(seat.getSeatNumber());
+        }
+
     }
 
     public static void main(String[] args) {
