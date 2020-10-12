@@ -88,13 +88,31 @@ public class Theater {
 
     }
 
+    public static void printSeats(List<Theater.Seat> seats) {
+        int c = 0;
+        for (Theater.Seat seat : seats) {
+            System.out.print(seat.getSeatNumber() + " ");
+            c += 4;
+        }
+        System.out.println();
+        for (int i = 0; i < c - 1; i++) {
+            System.out.print("=");
+        }
+    }
+
+    public static void sortList(List<? extends Theater.Seat> list) {
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = i + 1; j < list.size(); j++) {
+                if (list.get(i).compareTo(list.get(j)) > 0) {
+                    Collections.swap(list, i, j);
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Theater theater = new Theater("Vienna Theater", 8, 12);
-        theater.getSeats();
-        if (theater.reserveSeat("H11")) {
-            System.out.println("Please pay");
-        } else {
-            System.out.println("Sorry seat is taken");
-        }
+        List<Theater.Seat> seatsCopy = new ArrayList<>(theater.seats);
+        printSeats(seatsCopy);
     }
 }
