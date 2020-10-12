@@ -11,18 +11,38 @@ public class Theater {
         int lastRow = 'A' + (numRows - 1);
         for (char row = 'A'; row <= lastRow; row++) {
             for (int seatNum = 1; seatNum <= seatsPerRow; seatNum++) {
-                Seat seat = new Seat(row + String.format("%02d", seatNum));
+                double price = 12.00;
+                if ((row < 'D') && (seatNum >= 4 && seatNum <= 9)) {
+                    price = 14.00;
+                } else if ((row > 'F') && (seatNum < 4 || seatNum > 9)) {
+                    price = 7.00;
+                }
+                Seat seat = new Seat(row + String.format("%02d", seatNum), price);
                 seats.add(seat);
             }
         }
     }
 
+    public final static Comparator<Seat> PRICE_ORDER = new Comparator<Seat>() {
+        @Override
+        public int compare(Seat seat1, Seat seat2) {
+            if (seat1.getPrice() < seat2.getPrice()) {
+                return -1;
+            } else if (seat1.getPrice() > seat2.getPrice()) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+    };
+
     public String getTheatreName() {
         return this.theatreName;
     }
 
+
     public boolean reserveSeat(String seatNumber) {
-        Seat requestedSeat = new Seat(seatNumber);
+        Seat requestedSeat = new Seat(seatNumber, 0);
         int foundSeat = Collections.binarySearch(seats, requestedSeat, null);
         if (foundSeat >= 0) {
             return seats.get(foundSeat).reserve();
@@ -43,22 +63,26 @@ public class Theater {
         return requestedSeat.reserve();*/
     }
 
-    public void getSeats() {
-        for (Seat seat : seats) {
-            System.out.println(seat.getSeatNumber());
-        }
+    public Collection<Seat> getSeats() {
+        return seats;
     }
 
     private class Seat implements Comparable<Seat> {
         private final String seatNumber;
+        private double price;
         private boolean reserved = false;
 
-        public Seat(String seatNumber) {
+        public Seat(String seatNumber, double price) {
+            this.price = price;
             this.seatNumber = seatNumber;
         }
 
         public String getSeatNumber() {
             return seatNumber;
+        }
+
+        public double getPrice() {
+            return price;
         }
 
         public boolean reserve() {
@@ -89,14 +113,8 @@ public class Theater {
     }
 
     public static void printSeats(List<Theater.Seat> seats) {
-        int c = 0;
         for (Theater.Seat seat : seats) {
-            System.out.print(seat.getSeatNumber() + " ");
-            c += 4;
-        }
-        System.out.println();
-        for (int i = 0; i < c - 1; i++) {
-            System.out.print("=");
+            System.out.print(" " + seat.getSeatNumber() + " EUR " + seat.getPrice() + "|");
         }
     }
 
@@ -114,5 +132,34 @@ public class Theater {
         Theater theater = new Theater("Vienna Theater", 8, 12);
         List<Theater.Seat> seatsCopy = new ArrayList<>(theater.seats);
         printSeats(seatsCopy);
+
+        if (theater.reserveSeat("D12")) {
+            System.out.println("Please pay for D12");
+        } else {
+            System.out.println("Seat already reserved");
+        }
+
+        if (theater.reserveSeat("D12")) {
+            System.out.println("Please pay for D12");
+        } else {
+            System.out.println("Seat already reserved");
+        }
+
+        if (theater.reserveSeat("B13")) {
+            System.out.println("Please pay for B13");
+        } else {
+            System.out.println("Seat already reserved");
+        }
+
+        List<Theater.Seat> reverseSeats = new ArrayList<>(theater.getSeats());
+        Collections.reverse(reverseSeats);
+        printSeats(reverseSeats);
+
+
+        List<Theater.Seat> priceSeats = new ArrayList<>(theater.getSeats());
+        priceSeats.add(theater.new Seat("B00", 13.00));
+        priceSeats.add(theater.new Seat("A00", 13.00));
+        Collections.sort(priceSeats, Theater.PRICE_ORDER);
+        printSeats(priceSeats);
     }
 }
