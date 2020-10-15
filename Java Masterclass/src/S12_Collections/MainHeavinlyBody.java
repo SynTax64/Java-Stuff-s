@@ -98,7 +98,7 @@ public class MainHeavinlyBody {
         HeavenlyBody pluto = new HeavenlyBody("Pluto", 842);
         planets.add(pluto);
         for (HeavenlyBody planet : planets) {
-            System.out.println(planet.getName() + ": " + planet.getOrbitalPeriod()+" - "+planet.hashCode()+" - "+planet);
+            System.out.println(planet.getName() + ": " + planet.getOrbitalPeriod());
         }
 
         Object o = new Object();
