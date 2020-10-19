@@ -1,4 +1,4 @@
-package S13_JavaFX.sample;
+package S13_JavaFX.FirstFXApp.sample;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
