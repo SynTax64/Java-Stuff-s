@@ -1,0 +1,11 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:controller="S13_JavaFX.sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="CENTER" hgap="10" vgap="10">
+    <Label text="Welcome to JavaFX" textFill="green">
+        <font>
+            <Font name="Times New Roman bold" size="70"/>
+        </font>
+    </Label>
+</GridPane>
