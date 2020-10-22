@@ -1,4 +1,34 @@
-<?import javafx.scene.layout.GridPane?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:controller="S13_JavaFX.BorderPane.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <Label text="This label is in the top position" alignment="center"
+               BorderPane.alignment="CENTER"
+               style="-fx-border-color: blue; -fx-border-width: 3;-fx-border-style: dashed "/>
+    </top>
+    <left>
+        <Label text="This label is in the left position" alignment="CENTER" BorderPane.alignment="CENTER"/>
+    </left>
+
+    <right>
+        <Label text="This label is in the left position" alignment="CENTER" BorderPane.alignment="CENTER"/>
+    </right>
+
+    <center>
+        <Label text="This is loooooooooooooooooong text in the center position" BorderPane.alignment="CENTER"/>
+    </center>
+
+
+    <bottom>
+        <HBox spacing="10" alignment="center_right">
+            <padding>
+                <Insets bottom="10" right="10"/>
+            </padding>
+            <Button text="Ok" prefWidth="90"/>
+            <Button text="Cancel" prefWidth="90"/>
+            <Button text="Help" prefWidth="90"/>
+        </HBox>
+    </bottom>
+</BorderPane>
