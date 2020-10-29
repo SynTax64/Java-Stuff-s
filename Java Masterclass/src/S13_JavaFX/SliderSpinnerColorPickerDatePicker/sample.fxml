@@ -1,0 +1,17 @@
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="S13_JavaFX.SliderSpinnerColorPickerDatePicker.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <Slider GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="3" min="0" max="100"
+            showTickLabels="true"
+            showTickMarks="true" minorTickCount="4" snapToTicks="true"/>
+    <Spinner GridPane.rowIndex="1" GridPane.columnIndex="0" min="0" max="100" editable="true" initialValue="50"/>
+    <ColorPicker GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <DatePicker GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+</GridPane>
