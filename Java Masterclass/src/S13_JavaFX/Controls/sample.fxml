@@ -3,7 +3,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<GridPane fx:controller="S13_JavaFX.Controls.sample.Controller"
+<GridPane fx:controller="S13_JavaFX.Controls.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 
     <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Click Me!">
