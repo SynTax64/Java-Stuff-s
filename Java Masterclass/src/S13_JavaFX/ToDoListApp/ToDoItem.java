@@ -37,8 +37,13 @@ public class ToDoItem {
         this.deadLine = deadLine;
     }
 
+    public String getDetails() {
+        return shortDescription;
+    }
+
     @Override
     public String toString() {
         return shortDescription;
     }
+
 }
