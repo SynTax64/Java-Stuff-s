@@ -11,10 +11,18 @@ public class Example {
     }
 
     private static int divide() {
-        int x = getInt();
-        int y = getInt();
-        System.out.println("x is " + x + ", y is " + y);
-        return x / y;
+        int x, y;
+
+        try {
+            x = getInt();
+            y = getInt();
+            System.out.println("x is " + x + ", y is " + y);
+            return x / y;
+        } catch (NoSuchElementException e) {
+            throw new ArithmeticException("no suitable input");
+        } catch (ArithmeticException e) {
+            throw new ArithmeticException("attempt to divide by zero");
+        }
     }
 
     private static int getInt() {
