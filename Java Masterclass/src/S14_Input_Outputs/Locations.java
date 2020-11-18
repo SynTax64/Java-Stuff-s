@@ -8,22 +8,33 @@ public class Locations implements Map<Integer, Location> {
     private static Map<Integer, Location> locations = new HashMap<Integer, Location>();
 
     public static void main(String[] args) throws IOException {
-        FileWriter locFile = null;
-        try {
-            locFile = new FileWriter("locations.txt");
-            Scanner scanner = new Scanner(System.in);
+
+        try (FileWriter locFile = new FileWriter("locations.txt");
+             FileWriter dirFile = new FileWriter("directions.txt")) {
+
             for (Location location : locations.values()) {
                 locFile.write(location.getLocationID() + ", " + location.getDescription() + "\n");
-            }
-            locFile.close();
-        } finally {
-            System.out.println("in finally block");
-            if (locFile != null) {
-                System.out.println("Attempting to close locfile");
-                locFile.close();
+                for (String direction : location.getExits().keySet()) {
+                    dirFile.write(location.getLocationID() + "," + direction + "," + location.getExits().get(direction) + "\n");
+                }
             }
         }
     }
+//        try {
+//            locFile = new FileWriter("locations.txt");
+//            Scanner scanner = new Scanner(System.in);
+//            for (Location location : locations.values()) {
+//                locFile.write(location.getLocationID() + ", " + location.getDescription() + "\n");
+//            }
+//            locFile.close();
+//        } finally {
+//            System.out.println("in finally block");
+//            if (locFile != null) {
+//                System.out.println("Attempting to close locfile");
+//                locFile.close();
+//            }
+//        }
+//        }
 
 
     static {
