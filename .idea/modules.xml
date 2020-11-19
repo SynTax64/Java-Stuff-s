@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Foundational Java/Foundational Java.iml" filepath="$PROJECT_DIR$/Foundational Java/Foundational Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/Head First Design Paterns/Head First Design Paterns.iml" filepath="$PROJECT_DIR$/Head First Design Paterns/Head First Design Paterns.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Head First Java/Head First Java.iml" filepath="$PROJECT_DIR$/Head First Java/Head First Java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IntelliJ Course from beginner to upper intermediate/IntelliJ Course from beginner to upper intermediate.iml" filepath="$PROJECT_DIR$/IntelliJ Course from beginner to upper intermediate/IntelliJ Course from beginner to upper intermediate.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Introduction to Java Programming and Data Structures/Introduction to Java Programming and Data Structures.iml" filepath="$PROJECT_DIR$/Introduction to Java Programming and Data Structures/Introduction to Java Programming and Data Structures.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java/Java.iml" filepath="$PROJECT_DIR$/Java/Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java Masterclass/Java Masterclass.iml" filepath="$PROJECT_DIR$/Java Masterclass/Java Masterclass.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java-Stuff-s.iml" filepath="$PROJECT_DIR$/Java-Stuff-s.iml" />
       <module fileurl="file://$PROJECT_DIR$/JetBrains Academy/JetBrains Academy.iml" filepath="$PROJECT_DIR$/JetBrains Academy/JetBrains Academy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Projects/Projects.iml" filepath="$PROJECT_DIR$/Projects/Projects.iml" />
     </modules>
   </component>
 </project>

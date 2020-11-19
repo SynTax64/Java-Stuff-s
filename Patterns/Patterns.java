@@ -226,4 +226,16 @@ public class Patterns {
             System.out.println();
         }
     }
+
+    public static void pattern(int n1, int n2) {
+        for (int i = 0; i < n1; i++) {
+            for (int j = 1; j <= n2; j++) {
+                if (i < j) {
+                    System.out.println("+");
+                } else {
+                    System.out.println("-");
+                }
+            }
+        }
+    }
 }
