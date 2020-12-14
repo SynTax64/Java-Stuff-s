@@ -1,17 +1,11 @@
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
 import java.util.stream.*;
 
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-class Result {
+class ResultDiagonal {
 
     public static int diagonalDifference(List<List<Integer>> arr) {
         int d1 = 0;
@@ -48,7 +42,7 @@ public class SolutionDiagonalDifference {
             }
         });
 
-        int result = Result.diagonalDifference(arr);
+        int result = ResultDiagonal.diagonalDifference(arr);
 
         bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();
