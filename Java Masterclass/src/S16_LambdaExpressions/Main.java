@@ -1,9 +1,7 @@
 package S16_LambdaExpressions;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
+import java.util.function.Function;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,6 +29,9 @@ public class Main {
         employees.add(domen);
         employees.add(david);
         employees.add(tim);
+
+        Function<Employee, String> upperCase = employee-> employee.getName().toUpperCase();
+        System.out.println(upperCase.apply(david));
 
 //        Collections.sort(employees, new Comparator<Employee>() {
 //            @Override
