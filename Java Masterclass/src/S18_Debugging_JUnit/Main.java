@@ -1,4 +1,4 @@
-package S18_Debugging;
+package S18_Debugging_JUnit;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,5 +8,8 @@ public class Main {
             utilities.addChar(sb, 'a');
         }
         System.out.println(sb);
+        String str = "abcdef";
+        String result = utilities.upperAndPrefix(utilities.addSufix(str));
+        System.out.println(result);
     }
 }
