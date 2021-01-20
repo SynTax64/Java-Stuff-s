@@ -1,7 +1,5 @@
 package S16_LambdaExpressions;
 
-import jdk.dynalink.linker.LinkerServices;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
