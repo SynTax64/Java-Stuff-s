@@ -1,3 +1,4 @@
+package PasswordManager.gui;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;

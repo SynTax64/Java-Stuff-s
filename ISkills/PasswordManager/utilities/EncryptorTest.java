@@ -1,3 +1,4 @@
+package PasswordManager.utilities;
 
 import static org.junit.Assert.assertNotNull;
 

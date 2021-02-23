@@ -1,4 +1,2 @@
-package S13_JavaFX.HBox.sample;
-
-public class Controller {
-}
+//public class Controller {
+//}

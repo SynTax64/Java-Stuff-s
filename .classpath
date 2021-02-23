@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ISkills"/>
+	<classpathentry kind="src" path="HackerRank/src"/>
+	<classpathentry kind="src" path="Head First Design Paterns/src"/>
+	<classpathentry excluding="S13_JavaFX/HBox/sample/|S13_JavaFX/Controls/|S13_JavaFX/ToDoListApp/datamodel/|S13_JavaFX/FlowPane/|S13_JavaFX/BorderPane/|S13_JavaFX/UIThread/|S13_JavaFX/ComboBoxAndChoiceBox/|S13_JavaFX/FirstFXApp/|S13_JavaFX/GridPane/|S11_Packages_Static_And_Final/|S13_JavaFX/ToDoListApp/|S13_JavaFX/FlowPane/sample/|S13_JavaFX/|S13_JavaFX/HBox/|S13_JavaFX/GridPane/sample/|S13_JavaFX/FirstFXApp/sample/|S13_JavaFX/RadioButtonAndCheckBox/|S13_JavaFX/SliderSpinnerColorPickerDatePicker/" kind="src" path="Java Masterclass/src"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S11_Packages_Static_And_Final"/>
+	<classpathentry excluding="HBox/sample/|Controls/|ToDoListApp/datamodel/|FlowPane/|BorderPane/|UIThread/|ComboBoxAndChoiceBox/|FirstFXApp/|GridPane/|ToDoListApp/|FlowPane/sample/|HBox/|GridPane/sample/|FirstFXApp/sample/|RadioButtonAndCheckBox/|SliderSpinnerColorPickerDatePicker/" kind="src" path="Java Masterclass/src/S13_JavaFX"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S13_JavaFX/BorderPane"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S13_JavaFX/ComboBoxAndChoiceBox"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S13_JavaFX/Controls"/>
+	<classpathentry excluding="sample/" kind="src" path="Java Masterclass/src/S13_JavaFX/FirstFXApp"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S13_JavaFX/FirstFXApp/sample"/>
+	<classpathentry excluding="sample/" kind="src" path="Java Masterclass/src/S13_JavaFX/FlowPane"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S13_JavaFX/FlowPane/sample"/>
+	<classpathentry excluding="sample/" kind="src" path="Java Masterclass/src/S13_JavaFX/GridPane"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S13_JavaFX/GridPane/sample"/>
+	<classpathentry excluding="sample/" kind="src" path="Java Masterclass/src/S13_JavaFX/HBox"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S13_JavaFX/HBox/sample"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S13_JavaFX/RadioButtonAndCheckBox"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S13_JavaFX/SliderSpinnerColorPickerDatePicker"/>
+	<classpathentry excluding="datamodel/" kind="src" path="Java Masterclass/src/S13_JavaFX/ToDoListApp"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S13_JavaFX/ToDoListApp/datamodel"/>
+	<classpathentry kind="src" path="Java Masterclass/src/S13_JavaFX/UIThread"/>
+	<classpathentry kind="src" path="Java/src"/>
+	<classpathentry kind="src" path="JetBrains Academy/src"/>
+	<classpathentry kind="src" path="Projects/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="C:/Users/David/Downloads/quick-json-1.0.2.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
