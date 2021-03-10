@@ -66,6 +66,7 @@ public class Driver {
 //				((Dog) a).setServiceAnimal(false); 
 				myPetDog.setServiceAnimal(false);
 				System.out.println("Set " + myPetDog.getName() + "'s value for" + " is a service animal to false");
+
 			} else if (a instanceof Cat) {
 				Cat myPetCat = (Cat) a;
 				myPetCat.setDeclawed(false);
