@@ -7,12 +7,6 @@ public class Runner extends Athlete {
 
 	}
 
-	/**
-	 * Set the racer ID
-	 * 
-	 * @param int raceId is the ID for the racer
-	 */
-
 	public Runner(String name, int age, int racerId, String brand) {
 		super(name, age, racerId);
 		this.shoeBrand = brand;
