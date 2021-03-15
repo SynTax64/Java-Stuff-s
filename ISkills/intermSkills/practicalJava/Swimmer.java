@@ -1,23 +1,12 @@
 package intermSkills.practicalJava;
 
-public class Swimmer implements RaceParticipant {
-	private int racerId;
+public class Swimmer extends Athlete {
 
 	public Swimmer() {
 	}
 
-	public Swimmer(int racerId) {
-		this.racerId = racerId;
-	}
-
-	@Override
-	public void setRacerId(int racerId) {
-		this.racerId = racerId;
-	}
-
-	@Override
-	public int getRacerId() {
-		return this.racerId;
+	public Swimmer(String name, int age, int racerId) {
+		super(name, age, racerId);
 	}
 
 	@Override
@@ -27,7 +16,6 @@ public class Swimmer implements RaceParticipant {
 
 	@Override
 	public String toString() {
-		return String.format("%s]\tRacerID: %d\tActivity: %s\n", getClass(), getRacerId(), performRaceActivity());
+		return String.format("%s %s]\tActivity: %s\n", super.toString(), getClass(), performRaceActivity());
 	}
-
 }

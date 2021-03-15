@@ -7,6 +7,8 @@ public class SwimmerTest {
 
 	private Swimmer s;
 	private int racerId = 123456;
+	private String name = "Unknown";
+	private int age = 25;
 	private String raceActivity = "Swimming";
 
 	@Before
@@ -22,7 +24,7 @@ public class SwimmerTest {
 	@Test
 	public void testConstructors() {
 		assertNotNull("Default Swimmer could not be created", s);
-		Swimmer s2 = new Swimmer(racerId);
+		Swimmer s2 = new Swimmer(name, age, racerId);
 		assertNotNull("Default Swimmer could not be created", s2);
 		assertEquals("RacerId not set correctly on r2", racerId, s2.getRacerId());
 	}
