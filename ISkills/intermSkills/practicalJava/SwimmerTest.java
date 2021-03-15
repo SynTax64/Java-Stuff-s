@@ -36,6 +36,18 @@ public class SwimmerTest {
 	}
 
 	@Test
+	public void testGetSetName() {
+		s.setName(name);
+		assertEquals("The name is not set as expected", name, s.getName());
+	}
+
+	@Test
+	public void testGetSetAge() {
+		s.setAge(age);
+		assertEquals("The age is not set as expected", age, s.getAge());
+	}
+
+	@Test
 	public void performRaceActivity() {
 		String pra = s.performRaceActivity();
 		assertTrue("Perform race activity did not contain activity", pra.contains(raceActivity));
@@ -44,8 +56,12 @@ public class SwimmerTest {
 	@Test
 	public void testToString() {
 		s.setRacerId(racerId);
+		s.setName(name);
+		s.setAge(age);
 		String rts = s.toString();
 		assertTrue("To String does not contain racer id", rts.contains(String.format("%d", racerId)));
+		assertTrue("To String does not contain name", rts.contains(name));
+		assertTrue("To String does not contain age", rts.contains(String.format("%d", age)));
 		String rc = s.getClass().toString();
 		assertTrue("To String does not contain class", rts.contains(rc));
 		assertTrue("To String does not contain performActivity", rts.contains(raceActivity));
