@@ -1,4 +1,4 @@
-package intermSkills.practicalJava;
+package intermSkills.practicalJava.temporary;
 
 import java.util.Scanner;
 
@@ -7,8 +7,8 @@ import Utilities.Utilities;
 public class PackagesAndJars {
 
 	public static void main(String[] args) {
-		Runner r = new Runner();
-		Swimmer s = new Swimmer();
+		TMPRunner r = new TMPRunner();
+		TMPSwimmer s = new TMPSwimmer();
 
 		r.setName("David");
 		r.setRaceID(157965);
@@ -19,9 +19,9 @@ public class PackagesAndJars {
 		System.out.println(Utilities.nullSafeEquals(r.getName(), s.getName()));
 	}
 
-	private static Swimmer getNewSwimmer() {
+	private static TMPSwimmer getNewSwimmer() {
 		Scanner input = new Scanner(System.in);
-		Swimmer s = new Swimmer();
+		TMPSwimmer s = new TMPSwimmer();
 		System.out.print("Please enter the name of the swimmer: ");
 		s.setName(input.nextLine());
 		System.out.print("Please enter the raceID of the swimmer: ");
@@ -29,9 +29,9 @@ public class PackagesAndJars {
 		return s;
 	}
 
-	private static Runner getNewRunner() {
+	private static TMPRunner getNewRunner() {
 		Scanner input = new Scanner(System.in);
-		Runner r = new Runner();
+		TMPRunner r = new TMPRunner();
 		System.out.print("Please enter the name of the runner: ");
 		r.setName(input.nextLine());
 		System.out.print("Please enter the raceID of the runner: ");
@@ -47,8 +47,8 @@ public class PackagesAndJars {
 		System.out.println("*******************************************");
 		System.out.println("What would you like to do today?");
 		System.out.println("-------------------------------------------");
-		System.out.println("Enter '1' to add a new Runner");
-		System.out.println("Enter '2' to add a new Swimmer");
+		System.out.println("Enter '1' to add a new TMPRunner");
+		System.out.println("Enter '2' to add a new TMPSwimmer");
 		System.out.println("Enter '3' to quit");
 		System.out.println("-------------------------------------------");
 		System.out.println("*******************************************");

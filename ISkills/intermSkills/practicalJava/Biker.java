@@ -1,12 +1,12 @@
 package intermSkills.practicalJava;
 
-public class Swimmer implements RaceParticipant {
+public class Biker implements RaceParticipant {
 	private int racerId;
 
-	public Swimmer() {
+	public Biker() {
 	}
 
-	public Swimmer(int racerId) {
+	public Biker(int racerId) {
 		this.racerId = racerId;
 	}
 
@@ -22,12 +22,11 @@ public class Swimmer implements RaceParticipant {
 
 	@Override
 	public String performRaceActivity() {
-		return "Swimming...";
+		return "Biking...";
 	}
 
 	@Override
 	public String toString() {
 		return String.format("%s]\tRacerID: %d\tActivity: %s\n", getClass(), getRacerId(), performRaceActivity());
 	}
-
 }

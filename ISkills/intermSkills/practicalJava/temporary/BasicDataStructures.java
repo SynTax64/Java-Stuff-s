@@ -1,4 +1,4 @@
-package intermSkills.practicalJava;
+package intermSkills.practicalJava.temporary;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,9 +7,9 @@ public class BasicDataStructures {
 
 	public static void main(String[] args) {
 		final int MAX_RACE_RUNNERS = 5;
-		Runner[] raceRunners = new Runner[MAX_RACE_RUNNERS];
+		TMPRunner[] raceRunners = new TMPRunner[MAX_RACE_RUNNERS];
 		int raceRunnersCount = 0;
-		ArrayList<Swimmer> raceSwimmers = new ArrayList<>();
+		ArrayList<TMPSwimmer> raceSwimmers = new ArrayList<>();
 
 		boolean runRaceMenu = true;
 		while (runRaceMenu) {
@@ -56,8 +56,8 @@ public class BasicDataStructures {
 		System.out.println("*******************************************");
 		System.out.println("What would you like to do today?");
 		System.out.println("-------------------------------------------");
-		System.out.println("Enter '1' to add a new Runner");
-		System.out.println("Enter '2' to add a new Swimmer");
+		System.out.println("Enter '1' to add a new TMPRunner");
+		System.out.println("Enter '2' to add a new TMPSwimmer");
 		System.out.println("Enter '3' to quit");
 		System.out.println("-------------------------------------------");
 		System.out.println("*******************************************");
@@ -65,9 +65,9 @@ public class BasicDataStructures {
 		return result;
 	}
 
-	private static Swimmer getNewSwimmer() {
+	private static TMPSwimmer getNewSwimmer() {
 		Scanner input = new Scanner(System.in);
-		Swimmer s = new Swimmer();
+		TMPSwimmer s = new TMPSwimmer();
 		System.out.print("Please enter the name of the swimmer: ");
 		s.setName(input.nextLine());
 		System.out.print("Please enter the raceID of the swimmer: ");
@@ -75,9 +75,9 @@ public class BasicDataStructures {
 		return s;
 	}
 
-	private static Runner getNewRunner() {
+	private static TMPRunner getNewRunner() {
 		Scanner input = new Scanner(System.in);
-		Runner r = new Runner();
+		TMPRunner r = new TMPRunner();
 		System.out.print("Please enter the name of the runner: ");
 		r.setName(input.nextLine());
 		System.out.print("Please enter the raceID of the runner: ");

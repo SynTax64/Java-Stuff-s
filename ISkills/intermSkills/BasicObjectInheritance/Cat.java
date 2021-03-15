@@ -22,6 +22,6 @@ public class Cat extends Animal {
 
 	@Override
 	public String toString() {
-		return String.format("%s\tIs declawed: %b\n", super.toString(), isDeclawed);
+		return String.format("%s\tIs declawed: %b\n", super.toString(), isDeclawed());
 	}
 }

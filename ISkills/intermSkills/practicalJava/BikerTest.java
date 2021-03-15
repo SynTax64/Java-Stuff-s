@@ -3,48 +3,48 @@ package intermSkills.practicalJava;
 import static org.junit.Assert.*;
 import org.junit.*;
 
-public class SwimmerTest {
+public class BikerTest {
 
-	private Swimmer s;
+	private Biker b;
 	private int racerId = 123456;
-	private String raceActivity = "Swimming";
+	private String raceActivity = "Biking";
 
 	@Before
 	public void setUp() throws Exception {
-		s = new Swimmer();
+		b = new Biker();
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		s = null;
+		b = null;
 	}
 
 	@Test
 	public void testConstructors() {
-		assertNotNull("Default Swimmer could not be created", s);
-		Swimmer s2 = new Swimmer(racerId);
-		assertNotNull("Default Swimmer could not be created", s2);
+		assertNotNull("Default Biker could not be created", b);
+		Biker s2 = new Biker(racerId);
+		assertNotNull("Default Biker could not be created", s2);
 		assertEquals("RacerId not set correctly on r2", racerId, s2.getRacerId());
 	}
 
 	@Test
 	public void testGetSetRacerID() {
-		s.setRacerId(racerId);
-		assertEquals("The racerId is not set as expected", racerId, s.getRacerId());
+		b.setRacerId(racerId);
+		assertEquals("The racerId is not set as expected", racerId, b.getRacerId());
 	}
 
 	@Test
 	public void performRaceActivity() {
-		String pra = s.performRaceActivity();
+		String pra = b.performRaceActivity();
 		assertTrue("Perform race activity did not contain activity", pra.contains(raceActivity));
 	}
 
 	@Test
 	public void testToString() {
-		s.setRacerId(racerId);
-		String rts = s.toString();
+		b.setRacerId(racerId);
+		String rts = b.toString();
 		assertTrue("To String does not contain racer id", rts.contains(String.format("%d", racerId)));
-		String rc = s.getClass().toString();
+		String rc = b.getClass().toString();
 		assertTrue("To String does not contain class", rts.contains(rc));
 		assertTrue("To String does not contain performActivity", rts.contains(raceActivity));
 	}
