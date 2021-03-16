@@ -1,15 +1,10 @@
 package intermSkills;
 
 public class Person {
-	public String firstName;
-	public String lastName;
-	public int age;
+	private String firstName;
+	private String lastName;
+	private int age;
 
-	/**
-	 * @param firstName
-	 * @param lastName
-	 * @param age
-	 */
 	public Person(String firstName, String lastName, int age) {
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -23,7 +18,7 @@ public class Person {
 	}
 
 	public String getFirstName() {
-		return firstName;
+		return "executed getFirstName() method from Person class";
 	}
 
 	public void setFirstName(String firstName) {
@@ -31,7 +26,7 @@ public class Person {
 	}
 
 	public String getLastName() {
-		return lastName;
+		return "executed getLastName() method from Person class";
 	}
 
 	public void setLastName(String lastName) {
@@ -43,7 +38,15 @@ public class Person {
 	}
 
 	public void setAge(int age) {
-		this.age = age;
+		this.age++;
+	}
+
+	public void birthday() {
+		System.out.println("executed birthday() method from Person class");
+	}
+
+	public void birthday1() {
+		System.out.println("executed birthday1() method from Person class");
 	}
 
 	@Override

@@ -3,7 +3,7 @@ package S7_Composition_Encapsulation_Polymorphism.Polymorhism.PolymorhismExample
 public class MazeRunner extends Movie{
 
     public MazeRunner() {
-        super("Maze Runner");
+        super("Maze TMPRunner");
     }
 
     @Override
