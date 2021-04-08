@@ -20,7 +20,6 @@ public class TestSerializable {
 			fileOut.close();
 			System.out.println("Serialized data saved in employee.ser");
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 	}

@@ -2,3 +2,5 @@
 /.idea/
 *.iml
 /bin/
+*.txt
+*.class
